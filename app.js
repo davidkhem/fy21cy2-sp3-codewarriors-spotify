@@ -1,4 +1,5 @@
 // variables
+
 // username, password, button
 const username = document.querySelector('#username');
 const password = document.querySelector('#password');
@@ -8,6 +9,7 @@ const signinForm = document.querySelector('#signin-form');
 const form = document.querySelector('#form');
 
 const loginBtn = document.querySelector('#login-btn');
+const errorMsg = document.querySelector('#error-msg');
 
 // event handlers
 loginBtn.addEventListener('click', () => {
@@ -25,9 +27,8 @@ form.addEventListener('submit', (event) => {
 
 function validate() {
 
-    if (username.value.trim() === '' || password.value === "") {
+    if (username.value.trim() === '' || password.value.trim() === "") {
         alert('Do not leave blank');
-        // document.querySelector();
         return false;
     } else if (username.value.trim().length<6) {
         alert('Username need to be greater than 6 characters');
@@ -40,8 +41,3 @@ function validate() {
     }
 }
 
-// The password must contain at least one number
-// (?=.*[0-9])
-
-// The password must be eight characters or longer
-// (?=.{8,})

@@ -24,7 +24,6 @@
                     <p class="flex justify-center text-2xl">Free on Spotify.</p>
                 </div>
                 <div class="flex justify-center py-8">
-<!--                    <a href="signin.html"><button class="bg-green-500 w-64 p-2 rounded-full">Log In</button></a>-->
                     <button id="login-btn" class="bg-green-500 w-64 p-2 rounded-full">Log In</button>
                 </div>
             </div>
@@ -47,17 +46,17 @@
                         <p class="flex justify-center text-2xl">Log in to continue.</p>
                     </div>
                     <!--Input-->
-                    <form name="form" onsubmit="return validate()" action="home.html">
+                    <form onsubmit="return validate()" action="home.html">
 
                         <div id="div-username" class="flex justify-center py-6">
                             <input type="text" name="username" id="username" class="block bg-gray-800 w-64 h-8 rounded pl-3" placeholder="Email or username" autocomplete="off">
                         </div>
-                        <span><p id="error" class="text-sm text-red-500 bg-white hidden">Error</p></span>
+<!--       I tried          <span id="error-msg" class="text-sm text-red-500 bg-white hidden"></span>-->
 
                         <div id="div-password" class="flex justify-center">
                             <input type="password" name="password" id="password" class="block bg-gray-800 w-64 h-8 rounded pl-3" placeholder="Password" autocomplete="off">
                         </div>
-                        <!--                        <span><p class="text-sm text-red-500 bg-white">Error 2</p></span>-->
+<!--                        <span><p class="text-sm text-red-500 bg-white">Error 2</p></span>-->
 
                         <div class="w-64 ml-16 mt-3">
                             <a href="#" class="text-gray-500 text-sm underline">Reset Password</a>
