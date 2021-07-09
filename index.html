@@ -12,7 +12,7 @@
 
     <div class="bg-cover w-full h-screen flex items-center justify-center" style="background-image: url(/images/home-bg-blur.jpg)">
 <!--login-->
-        <div id="login" class="w-96 h-80 round-lg shadow-lg bg-black">
+        <div id="login-form" class="w-96 h-80 round-lg shadow-lg bg-black">
 <!--header-->
             <div class="flex justify-center p-3">
                 <img src="images/spotify_logo_white.png" class="w-36 h-18 p-4">
@@ -24,15 +24,100 @@
                     <p class="flex justify-center text-2xl">Free on Spotify.</p>
                 </div>
                 <div class="flex justify-center py-8">
-                    <a href="signin.html"><button class="bg-green-500 w-64 p-2 rounded-full">Log In</button></a>
+<!--                    <a href="signin.html"><button class="bg-green-500 w-64 p-2 rounded-full">Log In</button></a>-->
+                    <button id="login-btn" class="bg-green-500 w-64 p-2 rounded-full">Log In</button>
                 </div>
             </div>
 <!--footer-->
             <div class="flex justify-center">
                 <p class="text-gray-500 mr-3 text-sm">Don't have an account?</p>
-                <a href="signin.html" class="text-gray-400 text-sm underline">SIGNUP</a>
+                <a href="index.html" class="text-gray-400 text-sm underline">SIGNUP</a>
             </div>
         </div>
+
+<!--    sign in page    -->
+        <div id="signin-form" class="flex flex-col hidden">
+            <div class="w-96 h-96 round-lg shadow-lg bg-black">
+                <!--header-->
+                <div class="flex justify-center p-2">
+                    <img src="images/spotify_logo_white.png" class="w-36 h-18 p-4">
+                </div>
+                <div class="flex flex-col justify-center text-white">
+                    <div>
+                        <p class="flex justify-center text-2xl">Log in to continue.</p>
+                    </div>
+                    <!--Input-->
+                    <form name="form" onsubmit="return validate()" action="home.html">
+
+                        <div id="div-username" class="flex justify-center py-6">
+                            <input type="text" name="username" id="username" class="block bg-gray-800 w-64 h-8 rounded pl-3" placeholder="Email or username" autocomplete="off">
+                        </div>
+                        <span><p id="error" class="text-sm text-red-500 bg-white hidden">Error</p></span>
+
+                        <div id="div-password" class="flex justify-center">
+                            <input type="password" name="password" id="password" class="block bg-gray-800 w-64 h-8 rounded pl-3" placeholder="Password" autocomplete="off">
+                        </div>
+                        <!--                        <span><p class="text-sm text-red-500 bg-white">Error 2</p></span>-->
+
+                        <div class="w-64 ml-16 mt-3">
+                            <a href="#" class="text-gray-500 text-sm underline">Reset Password</a>
+                            <div class="flex justify-between items-center py-3">
+                                <p class="text-gray-500 text-sm">Remember me</p>
+                                <img src="images/icons/green-toggle.png" class="w-10 h-10">
+                            </div>
+                        </div>
+                        <!--Submit Button-->
+                        <div class="flex justify-center">
+                            <input type="submit" id="btn" value="Sign In" class="block bg-white w-64 p-2 -mb-3 rounded-full text-black">
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+            <!--bottom half-->
+            <div id="signin" class="w-96 h-72 round-lg shadow-lg bg-black">
+
+                <!--break line-->
+                <div class="flex justify-between items-center">
+                    <hr class="w-1/2 ml-16">
+                    <span class="p-1 text-gray-400 mb-1">OR</span>
+                    <hr class="w-1/2 mr-16">
+                </div>
+
+                <!--social media icons-->
+                <div class="flex flex-col justify-center text-white">
+                    <div class="flex justify-center py-1">
+                        <a href="#"><button class="bg-black border border-gray-50 w-64 p-3 flex justify-start items-center rounded-full text-sm">
+                            <img src="images/icons/fb_icon.svg" class="w-5 h-5">
+                            <h1 class="text-gray-400 ml-5">Continue with Facebook</h1>
+                        </button></a>
+                    </div>
+                    <div class="flex justify-center py-1">
+                        <a href="#"><button class="bg-black border border-gray-50 w-64 p-3 flex justify-start items-center rounded-full text-sm">
+                            <img src="images/icons/google_g_icon.svg" class="w-5 h-5">
+                            <h1 class="text-gray-400 ml-6">Continue with Google</h1>
+                        </button></a>
+                    </div>
+                    <div class="flex justify-center py-1">
+                        <a href="#"><button class="bg-black border border-gray-50 w-64 p-3 flex justify-start items-center rounded-full text-sm">
+                            <img src="images/icons/apple_icon_gray.svg" class="w-5 h-5">
+                            <h1 class="text-gray-400 ml-7">Continue with Apple</h1>
+                        </button></a>
+                    </div>
+
+                </div>
+                <!--footer-->
+                <div class="flex justify-center pt-3">
+                    <p class="text-gray-500 text-sm mr-3">Don't have an account?</p>
+                    <a href="index.html" class="text-gray-400 text-sm underline">SIGNUP</a>
+                </div>
+                <div class="flex justify-center pt-4">
+                    <a href="#" class="text-gray-500 text-sm">SETTINGS</a>
+                </div>
+            </div>
+        </div>
+
+
     </div>
 
 <script src="app.js"></script>
