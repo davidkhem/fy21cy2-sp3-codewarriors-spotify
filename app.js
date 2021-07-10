@@ -9,7 +9,7 @@ const signinForm = document.querySelector('#signin-form');
 const form = document.querySelector('#form');
 
 const loginBtn = document.querySelector('#login-btn');
-const errorMsg = document.querySelector('#error-msg');
+// const errorMsg = document.querySelector('#error-msg');
 
 // event handlers
 loginBtn.addEventListener('click', () => {
@@ -24,7 +24,7 @@ form.addEventListener('submit', (event) => {
     event.preventDefault();
 
 });
-
+// add alerts to show the requirements
 function validate() {
 
     if (username.value.trim() === '' || password.value.trim() === "") {
